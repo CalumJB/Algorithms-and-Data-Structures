@@ -26,7 +26,7 @@ public class BubbleSort {
 		for(int j=0; j<n-1;j++)
 		{
 			//bubble largest value to end
-			for(int k=0;k<n-1;k++)
+			for(int k=0;k<n-1-j;k++)
 			{
 				//compare to ints
 				if(ar[k]>ar[k+1])
