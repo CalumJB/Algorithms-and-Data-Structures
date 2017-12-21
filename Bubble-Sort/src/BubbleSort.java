@@ -22,6 +22,7 @@ public class BubbleSort {
 	//bubble sort method
 	public static void bubble(int n, int[] ar)
 	{
+		int counter = 0;
 		for(int j=0; j<n-1;j++)
 		{
 			//bubble largest value to end
@@ -32,9 +33,12 @@ public class BubbleSort {
 				{
 					swap(k,k+1, ar);
 				}
+				counter++;
 			}
 		}
+		System.out.printf("Count: %d\n", counter);
 	}
+	
 	
 	//method to swap elements in array
 	public static void swap(int a, int b, int[] ar)
