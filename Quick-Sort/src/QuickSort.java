@@ -1,23 +1,26 @@
 
 public class QuickSort {
 
-	private static int[] array = {8,7,6,5,4,9,2,1};
+	private static int[] array = {1,2,3,4,5,6,7,8};
 	
 	public static void quickSort(int[] ar, int start, int end)
 	{
+		for(int i=0; i<8;i++)
+		{
+			System.out.printf("%d ", array[i]);
+		}
+		System.out.println();
+		
 		if(start >= end)
 		{
+			System.out.println("Return");
 			return;
 		}
 		
 		int pivot = end;
 		pivot = partition(ar, start, pivot-1, pivot);
 		
-		for(int i=0; i<8;i++)
-		{
-			System.out.printf("%d ", array[i]);
-		}
-		System.out.println();
+		
 		
 		
 		quickSort(ar, start, pivot-1);
