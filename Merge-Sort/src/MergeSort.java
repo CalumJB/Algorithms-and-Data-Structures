@@ -31,12 +31,57 @@ public class MergeSort {
 		merge(leftArray);
 		merge(rightArray);
 		
+		doMerge(leftArray, rightArray, array);
+		
+		
+		
+	}
+	
+	private static void doMerge(int[] leftA, int[] rightA, int[] resultA)
+	{
+		int ll = leftA.length;
+		int rl = rightA.length;
+		
+		int i = 0;
+		int j = 0;
+		int k = 0;
+		while(i < ll && j < rl)
+		{
+			if(leftA[i] < rightA[j])
+			{
+				resultA[k] = leftA[i];
+				i++;
+			} else {
+				resultA[k] = rightA[j];
+				j++;
+			}
+			k++;
+		}
+		
+		while(i<ll) {
+			resultA[k] = leftA[i];
+			i++;
+			k++;
+		}
+		while(j<rl){
+			resultA[k] = rightA[j];
+			j++;
+			k++;
+		}
 	}
 	
 	public static void main(String[] args)
 	{
+		
 		int[] ar = {2,4,1,6,8,5,3,7};
 		merge(ar);
+		System.out.println();
+		
+		for(int i=0; i<8; i++)
+		{
+			System.out.printf("%d ", ar[i]);
+		}
+		
 		
 		
 	}
