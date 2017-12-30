@@ -5,8 +5,7 @@ public class Test {
 	{
 		
 		int[] ar = {2,4,1,6,8,5,3,7};
-		MergeSort test = new MergeSort();
-		test.merge(ar);
+		MergeSort.merge(ar);
 		System.out.println();
 		
 		for(int i=0; i<8; i++)

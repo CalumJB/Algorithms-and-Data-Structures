@@ -2,7 +2,7 @@
 
 public class MergeSort {
 	
-	MergeSort(){}
+	
 	public static void merge(int[] array)
 	{
 		int length = array.length;
